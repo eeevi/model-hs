@@ -3,7 +3,6 @@
 
 module ModelM where
 
-import Control.Monad (replicateM)
 import System.Random
 
 -- | Chain type with two states.
@@ -63,7 +62,7 @@ getAndSplit x = map (splitt ' ') (llsh (splitt '\n' x))
 
 -- | Build model with 0.5 start statement.
 applyWithHalf :: [String] -> [Double] -> String
-applyWithHalf x y = model x (Chain 0.0 0.2) y
+applyWithHalf x y = model x (Chain 0.0 0.5) y
 
 
 -- | Apply model to some data with some chances.

@@ -5,7 +5,6 @@
 module Main where
 
 import ModelM -- | Major functions defined here.
-import Control.Monad (replicateM)
 import System.Random
 
 
