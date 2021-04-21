@@ -1,0 +1,3 @@
+There is some nonsense just for the cause.
+Model will form everything from some input file.
+Need to skip newline for new sentence. Да, это так.
