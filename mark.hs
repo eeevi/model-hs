@@ -46,7 +46,7 @@ llsh [x, y]   = [x, y]
 llsh (x:y:xs) = [y] ++ llsh xs ++ [x] 
 
 
--- | EBIN :DDD
+-- | Main thing, yes. :>
 model :: [String] -> Chain -> [Double] -> String
 model x _ y | x == [] || y == [] = []
 model (x:y) (Chain p c) (g:l) = let mNext = model y (Chain c g) l
@@ -66,9 +66,9 @@ applyWithHalf :: [String] -> [Double] -> String
 applyWithHalf x y = model x (Chain 0.0 0.2) y
 
 
--- | Apply model to some data with some chanses.
+-- | Apply model to some data with some chances.
 times :: [[String]] -> [Double] -> [String]
-times y chanses = map (\n -> applyWithHalf n chanses) y
+times y chances = map (\n -> applyWithHalf n chances) y
 
 
 -- | Will connect list of strings to one single.
