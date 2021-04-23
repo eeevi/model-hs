@@ -3,7 +3,7 @@ Pretty simple markov chain. Constructing new sentences from some input file. Was
 
 ### build
 ```bash
-$ calab install random
+$ cabal install random
 $ git clone https://github.com/vulpes-solis/model-hs.git
 $ cd ./model-hs
 $ ghc main.hs -o <name>
