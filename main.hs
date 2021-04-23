@@ -1,19 +1,15 @@
+-- | Some personal Markov chain model.
+-- | For fun, for practice, for everything!
 -- |
--- | Personal simple Markov chain model.
--- | Just for fun (and for practice, ofc.)
 
 module Main where
 
-import ModelM -- | Major functions defined here.
+import Model.Main
+import Model.Core.Format
+import Model.Core.Chain
+import System.Environment
 import System.Random
 
-
--- | Do some magic here.
-main = do
-    x <- getLine
-    r <- readFile x
-    let s = getAndSplit r
-    n <- getStdGen
-
-    let result = times s (take 10 (randoms n :: [Double]))
-    putStrLn . conn $ result
+-- | :)
+main :: IO ()
+main = defaultMain
