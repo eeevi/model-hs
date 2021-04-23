@@ -8,15 +8,23 @@ import System.Random
 import System.Environment
 
 
+-- | Check command line args.
+argiven :: [String] -> String
+argiven [] = error "No input file in argumets!"
+argiven xs = head xs
+
+
 -- | Apply everything.
 applicate :: String -> Chain -> String
 applicate s c = concat $ map (\n -> model n c) (finalSplit s)
+
+
 
 -- | Do some magic, again.
 defaultMain :: IO ()
 defaultMain = do
     args <- getArgs
-    base <- readFile $ head args
+    base <- readFile $ argiven args
     c <- getStdGen
 
     let tenStates = setChain (take 10 (randoms c :: [Double]))
