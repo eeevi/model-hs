@@ -1,5 +1,5 @@
 # model-hs
-Pretty simple markov chain. Constructing new sentences from some input file. Was written just because I have so much freetime...
+Dumbest thing I've even written. Constructing some new phrases from an existing ones. I don't know what I'm spending my life for.
 
 ### build
 ```bash
