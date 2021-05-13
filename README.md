@@ -1,5 +1,5 @@
 # model-hs
-Dumbest thing I've even written. Constructing some new phrases from an existing ones. I don't know what I'm spending my life for.
+Dumbest thing I've ever written. Constructing some new phrases from an existing ones. I don't know what I'm spending my life for.
 
 ### build
 ```bash
