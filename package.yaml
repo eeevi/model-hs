@@ -1,0 +1,30 @@
+name:                model-hs
+version:             0.1.0.0
+github:              "vulpes-solis/model-hs"
+license:             MIT
+author:              "Vulpes Solis"
+maintainer:          "vulpes-solis"
+copyright:           "2021 Vulpes Solis"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README.
+
+dependencies:
+- base >= 4.7 && < 5
+- random >= 1.1
+
+library:
+  source-dirs: src
+
+executables:
+  model-hs:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - model-hs

@@ -1,26 +1,22 @@
 
--- | Main module.
-module Model.Main (defaultMain) where
+-- | Model: main module.
+module Model (defaultMain) where
 
-import Model.Core.Format
-import Model.Core.Chain
+import Core.Format
+import Core.Chain
 import System.Random
-import System.Environment
+import System.Environment (getArgs)
 
 
--- | Check command line args.
 argiven :: [String] -> String
 argiven [] = error "No input file in argumets!"
 argiven xs = head xs
 
 
--- | Apply everything.
 applicate :: String -> Chain -> String
 applicate s c = concat $ map (\n -> model n c) (finalSplit s)
 
 
-
--- | Do some magic, again.
 defaultMain :: IO ()
 defaultMain = do
     args <- getArgs

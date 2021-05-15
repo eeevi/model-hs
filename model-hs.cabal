@@ -1,0 +1,51 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b416da9e3d9f66f0f3e59b66c449fca7ed5352b9218a94f32d65f94b70d56fb0
+
+name:           model-hs
+version:        0.1.0.0
+description:    Please see the README.
+homepage:       https://github.com/vulpes-solis/model-hs#readme
+bug-reports:    https://github.com/vulpes-solis/model-hs/issues
+author:         Vulpes Solis
+maintainer:     vulpes-solis
+copyright:      2021 Vulpes Solis
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/vulpes-solis/model-hs
+
+library
+  exposed-modules:
+      Core.Chain
+      Core.Format
+      Model
+  other-modules:
+      Paths_model_hs
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , random >=1.1
+  default-language: Haskell2010
+
+executable model-hs
+  main-is: Main.hs
+  other-modules:
+      Paths_model_hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , model-hs
+    , random >=1.1
+  default-language: Haskell2010
