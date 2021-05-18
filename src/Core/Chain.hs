@@ -15,7 +15,6 @@ instance Show Chain where
 
 setChain :: [Double] -> Double -> Maybe Chain
 setChain x y | x == []        = Nothing
-             | y > 1 || y < 0 = Nothing
              | otherwise      = Just (Chain x y)
 
 

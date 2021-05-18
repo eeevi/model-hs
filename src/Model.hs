@@ -1,10 +1,9 @@
-
 -- | Model: main module.
 module Model (defaultMain) where
 
 import Core.Format
 import Core.Chain
-import System.Random
+import System.Random (getStdGen, randoms)
 import System.Environment (getArgs)
 
 
@@ -23,7 +22,7 @@ defaultMain = do
     base <- readFile $ argiven args
     c <- getStdGen
 
-    let tenStates = setChain (take 10 (randoms c :: [Double]))
+    let tenStates = setChain (take 20 (randoms c :: [Double]))
     let halfBase = tenStates 0.5
 
     putStrLn $ pretty $ applicate base $ unpack halfBase
