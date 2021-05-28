@@ -2,15 +2,15 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b416da9e3d9f66f0f3e59b66c449fca7ed5352b9218a94f32d65f94b70d56fb0
+-- hash: 2682d18412c46dd9598f1a714c9236ea128d38f4ec43d886b4bdff6c4663ca6c
 
 name:           model-hs
 version:        0.1.0.0
 description:    Please see the README.
-homepage:       https://github.com/vulpes-solis/model-hs#readme
-bug-reports:    https://github.com/vulpes-solis/model-hs/issues
+homepage:       https://github.com/eeevi/model-hs#readme
+bug-reports:    https://github.com/eeevi/model-hs/issues
 author:         Vulpes Solis
-maintainer:     vulpes-solis
+maintainer:     eeevi
 copyright:      2021 Vulpes Solis
 license:        MIT
 license-file:   LICENSE
@@ -21,7 +21,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/vulpes-solis/model-hs
+  location: https://github.com/eeevi/model-hs
 
 library
   exposed-modules:

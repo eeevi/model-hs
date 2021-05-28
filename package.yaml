@@ -1,9 +1,9 @@
 name:                model-hs
 version:             0.1.0.0
-github:              "vulpes-solis/model-hs"
+github:              "eeevi/model-hs"
 license:             MIT
 author:              "Vulpes Solis"
-maintainer:          "vulpes-solis"
+maintainer:          "eeevi"
 copyright:           "2021 Vulpes Solis"
 
 extra-source-files:
