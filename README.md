@@ -15,5 +15,6 @@ $ ./salad /some/file.txt
 ### example
 ```
 $ ./salad ./res/somedata.txt
-If abstract [thing] from 'Ding sich' in we one of Hegel's sich.' [in itself]....A in example, thus 'in
+If we abstract from sich' itself], one Hegel's standard sich.' itself]....A child, Hegel's is
+
 ```

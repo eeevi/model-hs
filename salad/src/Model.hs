@@ -26,7 +26,7 @@ buildText = do
     c <- getStdGen
 
     let tenStates = setChain $ take 30 (randoms c :: [Double])
-    let result = pretty <$> applicate base <$> tenStates 0.5
+    let result = pretty <$> applicate base <$> tenStates
 
     case result of
         Nothing -> putStrLn "err, chain building failed."

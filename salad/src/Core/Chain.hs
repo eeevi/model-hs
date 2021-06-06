@@ -1,26 +1,30 @@
-
 -- | Core.Chain: core chain module.
-module Core.Chain where
+module Core.Chain
+    ( model
+    , setChain
+    , Chain
+    ) where
 
 
-data Chain = Chain Chances Current
-
+data Chain = Chain Chances
 type Chances = [Double]
-type Current = Double
 
 
 instance Show Chain where
-    show (Chain x y) = show x ++ " " ++ show y
+    show (Chain c) = "Chain chances: " ++ show c
 
 
-setChain :: [Double] -> Double -> Maybe Chain
-setChain x y | x == []   = Nothing
-             | otherwise = Just (Chain x y)
+setChain :: [Double] -> Maybe Chain
+setChain x | length x <= 2 = Nothing
+           | otherwise     = Just (Chain x)
+
+
+modelPredicate :: (Double, Double) -> String -> String
+modelPredicate (x,y) s = case x >= y of
+                          True  -> s ++ " "
+                          False -> []
 
 
 model :: [String] -> Chain -> String
-model x (Chain y z) | x == [] || y == [] = []
-model (x:xs) (Chain (y:ys) z) | z >= y = x ++ " " ++ next
-                              | otherwise = next
-                                where next = model xs (Chain ys y)
-
+model s (Chain x) =
+    concat $ zipWith modelPredicate (zip x $ tail x) s 

@@ -1,5 +1,8 @@
 -- | Core.Format: module for formating.
-module Core.Format where
+module Core.Format 
+    ( pretty
+    , finalSplit 
+    ) where
 
 import Data.Char (toUpper)
 
