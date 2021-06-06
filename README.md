@@ -1,4 +1,4 @@
-# saladdy
+# salad
 Dumbest thing I've ever written. Constructing some new phrases from an existing ones. I don't know what I'm spending my life for.
 
 ### build
@@ -7,13 +7,13 @@ Install stack, clone this repository, then go to the directory of cloned reposit
 $ stack build
 $ stack install
 ```
-When the compilation is finished you'll get the `saladdy` binary executable file. For form something just launch it with base textfile path:
+When the compilation is finished you'll get the `salad` binary executable file. For form something just launch it with base textfile path:
 ```bash 
-./saladdy /some/file.txt
+$ ./salad /some/file.txt
 ```
 
 ### example
 ```
-$ ./saladdy ./res/somedata.txt
-Form everything some input skip newline new sentence. Это some nonsense for the
+$ ./salad ./res/somedata.txt
+If abstract [thing] from 'Ding sich' in we one of Hegel's sich.' [in itself]....A in example, thus 'in
 ```

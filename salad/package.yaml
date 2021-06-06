@@ -1,6 +1,6 @@
-name:                saladdy
+name:                salad
 version:             0.1.0.0
-github:              "eeevi/saladdy"
+github:              "eeevi/salad"
 license:             MIT
 author:              "Vulpes Solis"
 maintainer:          "eeevi"
@@ -16,7 +16,7 @@ library:
   source-dirs: src
 
 executables:
-  saladdy:
+  salad:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -24,4 +24,4 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - saladdy
+    - salad
