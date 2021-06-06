@@ -16,5 +16,4 @@ $ ./salad /some/file.txt
 ```
 $ ./salad ./res/somedata.txt
 If we abstract from sich' itself], one Hegel's standard sich.' itself]....A child, Hegel's is
-
 ```
