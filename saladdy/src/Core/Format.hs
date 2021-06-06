@@ -5,9 +5,7 @@ import Data.Char (toUpper)
 
 
 shuffle :: Ord a => [a] -> [a]
-shuffle []       = []
-shuffle [x]      = [x]
-shuffle [x, y]   = [y, x]
+shuffle x | length x <= 2 = x
 shuffle (x:y:xs) = [y] ++ shuffle xs ++ [x]
 
 
@@ -17,14 +15,13 @@ symbol n | n == '.' || n == '?' || n == '!' = True
 
 
 pretty :: String -> String
-pretty []     = []
-pretty [x, y] = [x, y]
+pretty x | length x <= 2 = x
 pretty (x:xs) | symbol x = [x] ++ space ++ rest
               | otherwise = [x] ++ pretty xs
-                 where 
-                    space = head xs : []
-                    rest  = (toUpper $ head $ tail xs) : []
-                            ++ pretty (tail $ tail xs)
+                where space = head xs : []
+                      tail' = tail xs
+                      rest  = (toUpper . head $ tail') : []
+                           ++ (pretty . tail $ tail')
 
 
 finalSplit :: String -> [[String]]

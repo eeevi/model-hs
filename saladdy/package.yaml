@@ -1,13 +1,10 @@
-name:                model-hs
+name:                saladdy
 version:             0.1.0.0
-github:              "eeevi/model-hs"
+github:              "eeevi/saladdy"
 license:             MIT
 author:              "Vulpes Solis"
 maintainer:          "eeevi"
 copyright:           "2021 Vulpes Solis"
-
-extra-source-files:
-- README.md
 
 description:         Please see the README.
 
@@ -19,7 +16,7 @@ library:
   source-dirs: src
 
 executables:
-  model-hs:
+  saladdy:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -27,4 +24,4 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - model-hs
+    - saladdy

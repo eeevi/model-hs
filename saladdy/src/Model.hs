@@ -1,10 +1,13 @@
 -- | Model: main module.
-module Model (defaultMain) where
+module Model 
+    ( buildText
+    ) where
 
 import Core.Format
 import Core.Chain
-import System.Random (getStdGen, randoms)
+
 import System.Environment (getArgs)
+import System.Random      (getStdGen, randoms)
 
 
 argiven :: [String] -> String
@@ -16,13 +19,15 @@ applicate :: String -> Chain -> String
 applicate s c = concat $ map (\n -> model n c) (finalSplit s)
 
 
-defaultMain :: IO ()
-defaultMain = do
+buildText :: IO ()
+buildText = do
     args <- getArgs
     base <- readFile $ argiven args
     c <- getStdGen
 
-    let tenStates = setChain (take 20 (randoms c :: [Double]))
-    let halfBase = tenStates 0.5
+    let tenStates = setChain $ take 30 (randoms c :: [Double])
+    let result = pretty <$> applicate base <$> tenStates 0.5
 
-    putStrLn $ pretty $ applicate base $ unpack halfBase
+    case result of
+        Nothing -> putStrLn "err, chain building failed."
+        Just st -> putStrLn st 

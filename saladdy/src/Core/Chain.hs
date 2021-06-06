@@ -14,19 +14,13 @@ instance Show Chain where
 
 
 setChain :: [Double] -> Double -> Maybe Chain
-setChain x y | x == []        = Nothing
-             | otherwise      = Just (Chain x y)
-
-
-unpack :: Maybe a -> a
-unpack (Just n) = n
-unpack Nothing  = error "Can't unpack Nothing."
+setChain x y | x == []   = Nothing
+             | otherwise = Just (Chain x y)
 
 
 model :: [String] -> Chain -> String
 model x (Chain y z) | x == [] || y == [] = []
 model (x:xs) (Chain (y:ys) z) | z >= y = x ++ " " ++ next
                               | otherwise = next
-                                 where
-                                 next = model xs (Chain ys y)
+                                where next = model xs (Chain ys y)
 

@@ -2,26 +2,23 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2682d18412c46dd9598f1a714c9236ea128d38f4ec43d886b4bdff6c4663ca6c
+-- hash: 5b44e940802473f525409f6a5990b7a600d95e1affd39f30bb042dc32f9009c7
 
-name:           model-hs
+name:           saladdy
 version:        0.1.0.0
 description:    Please see the README.
-homepage:       https://github.com/eeevi/model-hs#readme
-bug-reports:    https://github.com/eeevi/model-hs/issues
+homepage:       https://github.com/eeevi/saladdy#readme
+bug-reports:    https://github.com/eeevi/saladdy/issues
 author:         Vulpes Solis
 maintainer:     eeevi
 copyright:      2021 Vulpes Solis
 license:        MIT
-license-file:   LICENSE
 build-type:     Simple
 cabal-version:  >= 1.10
-extra-source-files:
-    README.md
 
 source-repository head
   type: git
-  location: https://github.com/eeevi/model-hs
+  location: https://github.com/eeevi/saladdy
 
 library
   exposed-modules:
@@ -29,7 +26,7 @@ library
       Core.Format
       Model
   other-modules:
-      Paths_model_hs
+      Paths_saladdy
   hs-source-dirs:
       src
   build-depends:
@@ -37,15 +34,15 @@ library
     , random >=1.1
   default-language: Haskell2010
 
-executable model-hs
+executable saladdy
   main-is: Main.hs
   other-modules:
-      Paths_model_hs
+      Paths_saladdy
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , model-hs
     , random >=1.1
+    , saladdy
   default-language: Haskell2010
