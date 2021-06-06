@@ -26,5 +26,4 @@ modelPredicate (x,y) s = case x >= y of
 
 
 model :: [String] -> Chain -> String
-model s (Chain x) =
-    concat $ zipWith modelPredicate (zip x $ tail x) s 
+model s (Chain x) = concat $ zipWith modelPredicate (zip x $ tail x) s 
