@@ -14,6 +14,10 @@ instance Show Chain where
     show (Chain c) = "Chain chances: " ++ show c
 
 
+model :: [String] -> Chain -> [String]
+model s (Chain x) = zipWith modelPredicate (zip x $ tail x) s 
+
+
 setChain :: [Double] -> Maybe Chain
 setChain x | length x <= 2 = Nothing
            | otherwise     = Just (Chain x)
@@ -21,9 +25,5 @@ setChain x | length x <= 2 = Nothing
 
 modelPredicate :: (Double, Double) -> String -> String
 modelPredicate (x,y) s = case x >= y of
-                          True  -> s ++ " "
+                          True  -> s
                           False -> []
-
-
-model :: [String] -> Chain -> String
-model s (Chain x) = concat $ zipWith modelPredicate (zip x $ tail x) s 
